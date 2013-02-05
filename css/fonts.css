@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'ruth';
+  src: url('ruth.eot');
+  src: url('ruth.eot?#iefix') format('embedded-opentype'), url('ruth.woff') format('woff'), url('ruth.ttf') format('truetype'), url('ruth.svg#ruths_fontregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'josh';
+  src: url('josh.eot');
+  src: url('josh.eot?#iefix') format('embedded-opentype'), url('josh.woff') format('woff'), url('josh.ttf') format('truetype'), url('ruth.svg#ruths_fontregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

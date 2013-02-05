@@ -1,0 +1,75 @@
+/* styles for ruthandjosh.net */
+
+@import "smart-grid";
+@import "fonts";
+
+
+@black: black;
+@red: #e8280e;
+@grey: grey;
+
+body { font-family: "Century Gothic","Apple Gothic",AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif; }
+:selection {
+	background: #F3F315;
+}
+
+h1 {
+	text-align:center;
+	span.r { position:relative; top:6px; }
+	span.j { position:relative; top:2px; }
+	span.n { font-weight:100; }
+	a { text-decoration:none; color:black;
+		&:visited { text-decoration:none; color:@black; }
+		&:hover { text-decoration:none; color:@grey; }
+	}
+}
+h2 { text-align:center; }
+
+.container {
+	margin:0 auto;
+}
+
+.row {
+	margin-bottom:50px;
+	width:100%;
+}
+
+.text {
+	.column;
+	.columns(6);
+	text-align:center;
+	//min-width:320px; //not mobile-friendly, override in media query
+}
+
+.left, .right {
+	.column;
+	.columns(3);
+}
+
+.center {
+	.column;
+	.columns(6);
+	.offset(3);
+}
+
+//let /images span multiple rows
+.row.multi {
+	position:relative;
+	img { position:absolute; left:0; }
+	.text { .offset(3); }
+	.right { .offset(9); }
+}
+
+span.large {
+	font-size:2.5em;
+}
+
+.top-40 { margin-top:40px; }
+.top-20 { margin-top:20px; }
+.bottom-20 { margin-bottom:20px; }
+.bottom-40 { margin-bottom:40px; }
+
+.hr.dotted {
+	border-bottom:1px dashed black;
+}
+
