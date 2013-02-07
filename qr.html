@@ -1,0 +1,23 @@
+---
+layout: default
+title: QRick Code
+permalink: /qr/
+---
+<script src='/js/okvideo.js'></script>
+<script type="text/javascript">
+    $(function(){
+        $.okvideo({ source: 'dQw4w9WgXcQ', 
+                    volume: 100, 
+                    loop: true,
+                    hd:true, 
+                    adproof: true,
+                    annotations: false,
+                    onFinished: function() { console.log('finished') },
+                    unstarted: function() { console.log('unstarted') },
+                    onPlay: function() { console.log('onplay') },
+                    onPause: function() { console.log('pause') },
+                    buffering: function() { console.log('buffering') },
+                    cued: function() { console.log('cued') },
+                 });
+    });
+  </script>
