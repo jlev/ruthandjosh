@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<h2>{{page.title}}</h2>
+
+<div id="post_list">
+	<ul>
+	{% for post in site.posts %}
+		<li>
+            <span class="date">{{ post.date | date_to_string }}</span> 
+            <h3>{{ post.title }}</h3> 
+            <div class="content">{{post.content}}</div>
+            <div class="meta">
+                
+            </div>
+        </li>
+	{% endfor %}
+	</ul>
+</div>

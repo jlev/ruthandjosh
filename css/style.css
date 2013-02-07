@@ -302,3 +302,21 @@ span.large {
 .hr.dotted {
   border-bottom: 1px dashed black;
 }
+#post_list ul {
+  list-style-type: none;
+}
+#post_list ul li {
+  margin: 40px 0px;
+}
+#post_list ul li .date {
+  float: right;
+}
+#post_list ul li h3 {
+  font-size: 1.2em;
+}
+#post_list ul li .content img {
+  width: 100%;
+}
+#post_list ul li .meta {
+  margin-top: 5px;
+}
