@@ -4,6 +4,7 @@
   max-width: 940px;
   padding: 0 1.0638297872340425%;
   margin: 0 auto;
+  width: 100%;
 }
 .container,
 .row {
@@ -161,7 +162,33 @@ html.oldie,
 html.lt-ie9 {
     .column-set;
 }
-*/@font-face {
+*//*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}*/
+@font-face {
   font-family: 'ruth';
   src: url('fonts/ruth.eot');
   src: url('fonts/ruth.eot?#iefix') format('embedded-opentype'), url('fonts/ruth.woff') format('woff'), url('fonts/ruth.ttf') format('truetype'), url('fonts/ruth.svg#ruths_fontregular') format('svg');
@@ -216,73 +243,19 @@ h1 a:hover {
 h2 {
   text-align: center;
 }
-.container {
-  margin: 0 auto;
-  width: 100%;
+nav ul {
+  list-style-type: none;
 }
-.row {
-  margin-bottom: 50px;
-  width: 100%;
+nav ul li {
+  display: inline;
+  margin-right: 5px;
+  text-decoration: none;
 }
-.text {
-  float: left;
-  margin: 0 0 0 2.127659574468085%;
-  width: 6.3829787%;
-  width: 48.936170072340424%;
-  text-align: center;
-}
-.text:first-child,
-.text.first {
-  margin-left: 0;
-}
-.left,
-.right {
-  float: left;
-  margin: 0 0 0 2.127659574468085%;
-  width: 6.3829787%;
-  width: 23.40425524893617%;
-}
-.left:first-child,
-.right:first-child,
-.left.first,
-.right.first {
-  margin-left: 0;
-}
-.center {
-  float: left;
-  margin: 0 0 0 2.127659574468085%;
-  width: 6.3829787%;
-  width: 48.936170072340424%;
-  margin-left: 27.65957439787234%;
-}
-.center:first-child,
-.center.first {
-  margin-left: 0;
-}
-.center:first-child,
-.center.first {
-  margin-left: 25.531914823404257%;
-}
-.row.multi {
-  position: relative;
-}
-.row.multi img {
-  position: absolute;
-  left: 0;
-}
-.row.multi .text {
-  margin-left: 27.65957439787234%;
-}
-.row.multi .text:first-child,
-.row.multi .text.first {
-  margin-left: 25.531914823404257%;
-}
-.row.multi .right {
-  margin-left: 78.72340404468085%;
-}
-.row.multi .right:first-child,
-.row.multi .right.first {
-  margin-left: 76.59574447021276%;
+nav ul li :after {
+  content: "|";
+  margin-left: 5px;
+  text-decoration: none;
+  color: #000000;
 }
 span.large {
   font-size: 2.5em;
@@ -301,6 +274,162 @@ span.large {
 }
 .hr.dotted {
   border-bottom: 1px dashed black;
+}
+.story .row {
+  margin-bottom: 50px;
+  width: 100%;
+}
+.story .row .text {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 48.936170072340424%;
+  text-align: center;
+}
+.story .row .text:first-child,
+.story .row .text.first {
+  margin-left: 0;
+}
+.story .row .left,
+.story .row .right {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 23.40425524893617%;
+}
+.story .row .left:first-child,
+.story .row .right:first-child,
+.story .row .left.first,
+.story .row .right.first {
+  margin-left: 0;
+}
+.story .row .center {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 48.936170072340424%;
+  margin-left: 27.65957439787234%;
+}
+.story .row .center:first-child,
+.story .row .center.first {
+  margin-left: 0;
+}
+.story .row .center:first-child,
+.story .row .center.first {
+  margin-left: 25.531914823404257%;
+}
+.story .row.multi {
+  position: relative;
+}
+.story .row.multi img {
+  position: absolute;
+  left: 0;
+}
+.story .row.multi .text {
+  margin-left: 27.65957439787234%;
+}
+.story .row.multi .text:first-child,
+.story .row.multi .text.first {
+  margin-left: 25.531914823404257%;
+}
+.story .row.multi .right {
+  margin-left: 78.72340404468085%;
+}
+.story .row.multi .right:first-child,
+.story .row.multi .right.first {
+  margin-left: 76.59574447021276%;
+}
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}*/
+/*.waves{
+	background-size:20px 10px;
+	background-color:@waves;
+	background-image:-webkit-radial-gradient(100% 150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-webkit-radial-gradient(0    150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-webkit-radial-gradient(50%  100%,circle,white 10%,@waves 11%,@waves 23%,white 24%,white 30%,@waves 31%,@waves 43%,white 44%,white 50%,@waves 51%,@waves 63%,white 64%,white 71%,transparent 71%,transparent),-webkit-radial-gradient(100% 50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent),-webkit-radial-gradient(0    50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent);
+	background-image:-moz-radial-gradient(100% 150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-moz-radial-gradient(0    150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-moz-radial-gradient(50%  100%,circle,white 10%,@waves 11%,@waves 23%,white 24%,white 30%,@waves 31%,@waves 43%,white 44%,white 50%,@waves 51%,@waves 63%,white 64%,white 71%,transparent 71%,transparent),-moz-radial-gradient(100% 50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent),-moz-radial-gradient(0    50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent);
+	background-image:radial-gradient(100% 150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),radial-gradient(0    150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),radial-gradient(50%  100%,circle,white 10%,@waves 11%,@waves 23%,white 24%,white 30%,@waves 31%,@waves 43%,white 44%,white 50%,@waves 51%,@waves 63%,white 64%,white 71%,transparent 71%,transparent),radial-gradient(100% 50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent),radial-gradient(0    50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent);
+	.opacity(0.75);
+}*/
+#home {
+  position: relative;
+}
+#home .background {
+  width: 90%;
+  z-index: -1;
+  border: 1px solid black;
+  overflow: hidden;
+  height: 500px;
+}
+#home .background #sky {
+  height: 300px;
+  background: #e7fcfc;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e7fcfc), color-stop(1, #bdf3f0));
+  background: -ms-linear-gradient(bottom, #e7fcfc, #bdf3f0);
+  background: -moz-linear-gradient(center bottom, #e7fcfc 0%, #bdf3f0 100%);
+  background: -o-linear-gradient(#bdf3f0, #e7fcfc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdf3f0', endColorstr='#e7fcfc', GradientType=0);
+  z-index: 2;
+}
+#home .background #sky .bird {
+  display: inline-block;
+}
+#home .background #sea {
+  height: 200px;
+  background-color: #7cd5df;
+  z-index: 0;
+}
+#home .background #grass {
+  height: 200px;
+  width: 100%;
+  background-color: #ABE189;
+  position: relative;
+  overflow: hidden;
+  top: -125px;
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  z-index: 1;
+}
+#home .background #grass div.text {
+  position: relative;
+  top: 60px;
+  left: 25px;
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  transform: skewY(5deg);
+}
+#home #house {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10;
 }
 #post_list ul {
   list-style-type: none;

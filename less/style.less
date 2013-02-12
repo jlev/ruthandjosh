@@ -1,8 +1,8 @@
 /* styles for ruthandjosh.net */
 
 @import "smart-grid";
+@import "elements.less";
 @import "fonts";
-
 
 @black: black;
 @red: #e8280e;
@@ -13,6 +13,7 @@ body { font-family: "Century Gothic","Apple Gothic",AppleGothic,"URW Gothic L","
 	background: #F3F315;
 }
 
+//header
 h1 {
 	text-align:center;
 	span.r { position:relative; top:6px; }
@@ -25,40 +26,25 @@ h1 {
 }
 h2 { text-align:center; }
 
-.container {
-	margin:0 auto;
-	width:100%;
-}
+nav {
+	ul {
+		list-style-type:none;
+		li {
+			display:inline;
+			margin-right:5px;
+			text-decoration:none;
+			:after {
+				content:"|";
+				margin-left:5px;
+				text-decoration:none;
+				color:@black;
+			}
 
-.row {
-	margin-bottom:50px;
-	width:100%;
-}
+			a {
 
-.text {
-	.column;
-	.columns(6);
-	text-align:center;
-	//min-width:320px; //not mobile-friendly, override in media query
-}
-
-.left, .right {
-	.column;
-	.columns(3);
-}
-
-.center {
-	.column;
-	.columns(6);
-	.offset(3);
-}
-
-//let /images span multiple rows
-.row.multi {
-	position:relative;
-	img { position:absolute; left:0; }
-	.text { .offset(3); }
-	.right { .offset(9); }
+			}
+		}
+	}
 }
 
 span.large {
@@ -74,21 +60,7 @@ span.large {
 	border-bottom:1px dashed black;
 }
 
-//blog posts
-#post_list {
-	ul {
-		list-style-type: none;
-		li {
-			margin:40px 0px;
-			.date { float:right; }
-			h3 { font-size:1.2em; }
-			.content {
-				img { width:100%; }
-			}
-			.meta {
-				margin-top:5px;
-			}
-		}
-	}
-}
-
+//page specific layouts
+@import "story";
+@import "home";
+@import "blog";

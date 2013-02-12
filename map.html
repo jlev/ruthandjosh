@@ -1,0 +1,38 @@
+---
+layout: default
+title: Venue Map
+permalink: /map/
+---
+
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+<![endif]-->
+
+<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+
+<script src="/js/leaflet/tile.stamen.js"></script>
+<script src="/js/leaflet/l.control.geosearch.js"></script>
+<script src="/js/leaflet/l.geosearch.provider.google.js"></script>
+<script src="/js/leaflet/L.KML.js"></script>
+<link rel="stylesheet" href="/js/leaflet/l.geosearch.css" />
+
+<div id="map" style="width: 100%; height: 100%;"></div>
+	
+<script type="text/javascript">
+	var basemap = new L.StamenTileLayer("watercolor"); //watercolor
+	var map = new L.Map("map", {
+		layers: [basemap], 
+	    center: new L.LatLng(37.87227881950715, -122.49429702758789),
+	    zoom: 13
+	});
+
+	//add geosearch
+    new L.Control.GeoSearch({
+        provider: new L.GeoSearch.Provider.Google()
+    }).addTo(map);
+
+    //add venue points from kml
+    var points = new L.KML("/js/leaflet/venues.kml", {async: true});
+    map.addLayer(points);
+</script>

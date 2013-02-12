@@ -4,6 +4,12 @@ layout: default
 
 <h2>{{page.title}}</h2>
 
+<script type="text/javascript">
+$(document).ready(function() {
+    $("post_list img.lazy").lazyload();
+});
+</script>
+
 <div id="post_list">
 	<ul>
 	{% for post in site.posts %}

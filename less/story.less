@@ -1,0 +1,33 @@
+//custom grid layouts for story
+.story {
+	.row {
+		margin-bottom:50px;
+		width:100%;
+
+		.text {
+			.column;
+			.columns(6);
+			text-align:center;
+			//min-width:320px; //not mobile-friendly, override in media query
+		}
+
+		.left, .right {
+			.column;
+			.columns(3);
+		}
+
+		.center {
+			.column;
+			.columns(6);
+			.offset(3);
+		}
+
+		//let /images span multiple rows
+		&.multi {
+			position:relative;
+			img { position:absolute; left:0; }
+			.text { .offset(3); }
+			.right { .offset(9); }
+		}
+	}
+}
