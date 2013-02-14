@@ -16,27 +16,31 @@
 }*/
 
 #home {
-	.container {
+	#scene {
 		position:relative;
 		width:90%;
 		min-width:400px;
 		padding:0;
+		display:inline-block;
 	}
 	.background {
 		z-index:-1;
 		border:1px solid black;
-		overflow:hidden;
+		position:relative;
+		overflow-y:hidden;
+		overflow-x:visible;
 		height:500px;
 		width:100%;
 		#sky {
 			height:300px;
 			z-index:2;
 
+			&.dawn { .gradient(#6C7997,#6C7997, #56425F); }
 			&.sunrise { .gradient(#FFFFCA, #FFFFCA, #D3C6CC); }
 			&.sunset { .gradient(#FEDD7B, #FEDD7B, #445D7B); }
 			&.day { .gradient(#E7FCFC, #E7FCFC, #BDF3F0); }
-			&.twilight { .gradient(#6C7997,#6C7997, #56425F); }
-			&.night { .gradient(#001649, #604779, #001649); }
+			&.dusk { .gradient(#6C7997,#6C7997, #56425F); }
+			&.night { .gradient(#604779, #604779, #001649); }
 			//stars?
 
 			.bird {
@@ -62,7 +66,6 @@
 				left:25px;
 				.transform(skewY(5deg));
 			}
-			//.rotation(-10deg);
 
 			z-index:1;
 
@@ -71,6 +74,23 @@
 	#house {
 		position:absolute;
 		right:-80px;
+		bottom:0px;
+		z-index:2;
+		&.shade:before {
+			content:url('/images/lyford-house-mask.png');
+			opacity:0.55;
+			position:absolute;
+			right:0px;
+			bottom:9px;
+		}
+	}
+
+	#clock {
+		cursor:pointer;
+		width:32px;
+		img { width:32px; }
+		position:absolute;
+		right:-40px;
 		bottom:0px;
 		z-index:100;
 	}

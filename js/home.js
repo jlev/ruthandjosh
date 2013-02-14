@@ -10,36 +10,46 @@ function currentTimeInTz(offset) {
     return nd;
 }
 
+//keep these in an array so we can cycle through them in order
+var phases = ["night","dawn","sunrise","day","sunset","dusk"];
+var currentPhase = ""; //tracks current phase, set in document.ready and advanceSky
+
 function getSkyPhase(time,sunrise,sunset) {
 	//given current time, sunrise and sunet, calculate sky phase
-	//one of [night,twilight,sunrise,day,sunset]
-	if (time < sunrise-1) { return "night"; }
-	if (time < sunrise) { return "twilight"; }
-	if (time < sunrise+1) { return "sunrise"; }
-	if (time < sunset-1) { return "day"; }
-	if (time < sunset) { return "sunset"; }
-	if (time < sunset+1) { return "twilight"; }
+	if (time < sunrise-1) { return phases[0]; }
+	if (time < sunrise) { return phases[1]; }
+	if (time < sunrise+1) { return phases[2]; }
+	if (time < sunset-1) { return phases[3]; }
+	if (time < sunset) { return phases[4]; }
+	if (time < sunset+1) { return phases[5]; }
 	return "night";
 }
 
 function setSky(phase) {
-	$('#sky').attr('class',phase);
-	console.log('set sky '+phase);
+	//set the sky to the given phase
 
+	$('#sky').attr('class',phase);
 	if (phase === "night") {
-		console.log('birds to sleep');
 		$('.bird').removeClass('awake').addClass('asleep');
 
-		console.log('darken scene');
 		$('#home .background').addClass('dark');
+		$('#home #house').addClass('shade');
 	} else {
 		$('#home .background').removeClass('dark');
+		$('#home #house').removeClass('shade');
 	}
 
 	if (phase === "day") {
-		console.log('wake birds');
 		$('.bird').removeClass('awake').addClass('asleep');
 	}
+}
+
+function advanceSky() {
+	var idx = phases.indexOf(currentPhase);
+	var nextIdx = (idx+1) % (phases.length);
+	var nextPhase = phases[nextIdx];
+	setSky(nextPhase);
+	currentPhase = nextPhase
 }
 
 function fogOn() {
@@ -54,7 +64,12 @@ function fogOff() {
 $(document).ready(function() {
 	var datePST = currentTimeInTz(-8);
 	var sf = new SunriseSunset( datePST.getFullYear(), datePST.getMonth()+1, datePST.getDate(), 37.894234,-122.497238);
-	var time_24 = datePST.getHours() + datePST.getMinutes()/60;
-	var phase = getSkyPhase(time_24,sf.sunriseLocalHours(-8),sf.sunsetLocalHours(-8));
-	setSky(phase);
+	var time24 = datePST.getHours() + datePST.getMinutes()/60;
+	currentPhase = getSkyPhase(time24,sf.sunriseLocalHours(-8),sf.sunsetLocalHours(-8));
+	setSky(currentPhase);
+
+	$('#clock').click(function(){
+		$('#clock').animate({rotate: '+=60deg'}, 500);
+		setTimeout('advanceSky()',500);
+	});
 });

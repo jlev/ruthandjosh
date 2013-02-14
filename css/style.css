@@ -373,22 +373,33 @@ span.large {
 	background-image:radial-gradient(100% 150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),radial-gradient(0    150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),radial-gradient(50%  100%,circle,white 10%,@waves 11%,@waves 23%,white 24%,white 30%,@waves 31%,@waves 43%,white 44%,white 50%,@waves 51%,@waves 63%,white 64%,white 71%,transparent 71%,transparent),radial-gradient(100% 50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent),radial-gradient(0    50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent);
 	.opacity(0.75);
 }*/
-#home .container {
+#home #scene {
   position: relative;
   width: 90%;
   min-width: 400px;
   padding: 0;
+  display: inline-block;
 }
 #home .background {
   z-index: -1;
   border: 1px solid black;
-  overflow: hidden;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: visible;
   height: 500px;
   width: 100%;
 }
 #home .background #sky {
   height: 300px;
   z-index: 2;
+}
+#home .background #sky.dawn {
+  background: #6c7997;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6c7997), color-stop(1, #56425f));
+  background: -ms-linear-gradient(bottom, #6c7997, #56425f);
+  background: -moz-linear-gradient(center bottom, #6c7997 0%, #56425f 100%);
+  background: -o-linear-gradient(#56425f, #6c7997);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56425f', endColorstr='#6c7997', GradientType=0);
 }
 #home .background #sky.sunrise {
   background: #ffffca;
@@ -414,7 +425,7 @@ span.large {
   background: -o-linear-gradient(#bdf3f0, #e7fcfc);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdf3f0', endColorstr='#e7fcfc', GradientType=0);
 }
-#home .background #sky.twilight {
+#home .background #sky.dusk {
   background: #6c7997;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6c7997), color-stop(1, #56425f));
   background: -ms-linear-gradient(bottom, #6c7997, #56425f);
@@ -423,7 +434,7 @@ span.large {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56425f', endColorstr='#6c7997', GradientType=0);
 }
 #home .background #sky.night {
-  background: #001649;
+  background: #604779;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #604779), color-stop(1, #001649));
   background: -ms-linear-gradient(bottom, #604779, #001649);
   background: -moz-linear-gradient(center bottom, #604779 0%, #001649 100%);
@@ -466,7 +477,25 @@ span.large {
   position: absolute;
   right: -80px;
   bottom: 0px;
+  z-index: 2;
+}
+#home #house.shade:before {
+  content: url('/images/lyford-house-mask.png');
+  opacity: 0.55;
+  position: absolute;
+  right: 0px;
+  bottom: 9px;
+}
+#home #clock {
+  cursor: pointer;
+  width: 32px;
+  position: absolute;
+  right: -40px;
+  bottom: 0px;
   z-index: 100;
+}
+#home #clock img {
+  width: 32px;
 }
 #home .dark:after {
   background: #000;
