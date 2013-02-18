@@ -440,6 +440,7 @@ section.content {
 }
 section.content p {
   padding: 10px 20px;
+  line-height: 20px;
 }
 section.content a {
   color: #46a8df;
