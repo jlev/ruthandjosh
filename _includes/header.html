@@ -1,15 +1,15 @@
 <header>
-	<h1><a href="/"><span class="r">Ruth</span>
-		<span class="n"> and </span>
-		<span class="j">Josh</span>
-		<span class="n"> .net</span></a>
+	<h1>
+		<div class="name ruth">Ruth<span>Miller</span></div>
+		<div class="amp">&amp;</div>
+		<div class="name josh">Josh<span>Levinger</span></div>
 	</h1>
 
 	<nav>
 		<ul>
-			<li><a href="/story/">Our Story</a></li>
-			<li><a href="/wedding/">The Wedding</a></li>
-			<li><a href="/meme/">Memes</a></li>
-			<li><a href="/registry/">Registry</a></li>
+			{% for link in site.navigation %}
+		    <li {% if page.url == link.url %}class="current"{% endif %}>
+		       <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a></li>
+		    {% endfor %}
 	</nav>
 </header>

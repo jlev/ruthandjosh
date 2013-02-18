@@ -1,0 +1,51 @@
+---
+layout: default
+title: Hotel Reservations
+permalink: /hotels/
+---
+<div id="hotels">
+	<div class="text">
+		<p><em>Book your hotel by April 29 to receive a group rate.</em></p>
+
+		<h3>Hotel Option 1: <a href="http://www.marinhotels.com/mill-valley-inn/home" target="_blank">Mill Valley Inn</a></h3>
+		<p>Rooms range from $279 to $399 per night, with a required two-night minimum stay. Call 415-389-6608 and ask for the Miller-Levinger Wedding to receive a 10% discount. The Mill Valley Inn is in the center of walkable downtown Mill Valley, with several shops and restaurants, and adjacent to a brewery, which will host the post-reception after party.</p>
+		 
+		<h3>Hotel Option 2: <a href="http://lodgeattiburon.com/" target="_blank">The Lodge at Tiburon</a></h3>
+		<p>Rooms start at $225 per night with no minimum stay required. Call 415-435-3133 and ask for the Miller-Levinger Wedding to receive a 15% discount. The Lodge is 1200 feet from the Tiburon Ferry Terminal, and three miles from the wedding venue along a coastal walking and bicycle path.</p>
+	</div>
+
+	<div class="map">
+		<div id="map" style="width: 100%; height: 100%;"></div>
+		<a href="https://maps.google.com/maps/ms?msid=209613637814783194334.0004d554028f7bba283e6&msa=0&iwloc=A" target="_blank">see this map on google</a>
+	</div>
+</div>
+
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+<![endif]-->
+
+<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+<script src="/js/leaflet/tile.stamen.js"></script>
+<script src="/js/leaflet/l.control.geosearch.js"></script>
+<script src="/js/leaflet/l.geosearch.provider.google.js"></script>
+<script src="/js/leaflet/L.KML.js"></script>
+<link rel="stylesheet" href="/js/leaflet/l.geosearch.css" />
+
+<script type="text/javascript">
+	var basemap = new L.StamenTileLayer("toner"); //watercolor
+	var map = new L.Map("map", {
+		layers: [basemap], 
+	    center: new L.LatLng(37.86618078529668, -122.43576049804688),
+	    zoom: 11
+	});
+
+	//add geosearch
+    new L.Control.GeoSearch({
+        provider: new L.GeoSearch.Provider.Google()
+    }).addTo(map);
+
+    //add venue points from kml
+    var points = new L.KML("/js/leaflet/venues.kml", {async: true});
+    map.addLayer(points);
+</script>

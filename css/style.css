@@ -1,4 +1,135 @@
 /* styles for ruthandjosh.net */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
 /*! smart-grid.css 3.0.0 | BSD License | http://dryan.com/css-smart-grid */
 .container {
   max-width: 940px;
@@ -168,26 +299,6 @@ html.lt-ie9 {
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
-/*.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
-  -moz-column-width: @colwidth;
-  -moz-column-count: @colcount;
-  -moz-column-gap: @colgap;
-  -moz-column-rule-color: @columnRuleColor;
-  -moz-column-rule-style: @columnRuleStyle;
-  -moz-column-rule-width: @columnRuleWidth;
-  -webkit-column-width: @colwidth;
-  -webkit-column-count: @colcount;
-  -webkit-column-gap: @colgap;
-  -webkit-column-rule-color: @columnRuleColor;
-  -webkit-column-rule-style: @columnRuleStyle;
-  -webkit-column-rule-width: @columnRuleWidth;
-  column-width: @colwidth;
-  column-count: @colcount;
-  column-gap: @colgap;
-  column-rule-color: @columnRuleColor;
-  column-rule-style: @columnRuleStyle;
-  column-rule-width: @columnRuleWidth;
-}*/
 @font-face {
   font-family: 'ruth';
   src: url('fonts/ruth.eot');
@@ -209,53 +320,102 @@ html.lt-ie9 {
   font-family: 'ruth';
 }
 body {
-  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  font-family: "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  text-align: center;
+  margin: 20px;
+  background: -webkit-linear-gradient(-45deg, #898a8a 25%, #657784 25%, #657784 50%, #898a8a 50%, #898a8a 75%, #657784 75%);
+  background-size: 16px 16px;
 }
 :selection {
   background: #F3F315;
 }
+div.container {
+  background: #f5fafb;
+  margin: 0 auto;
+  border-right: 2px white;
+  border-bottom: 2px white;
+  text-align: left;
+}
 h1 {
   text-align: center;
+  font-family: "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 20px 0;
 }
-h1 span.r {
-  position: relative;
-  top: 6px;
+h1 .name {
+  color: #46a8df;
+  display: inline-block;
+  font-size: 40px;
 }
-h1 span.j {
-  position: relative;
-  top: 2px;
-}
-h1 span.n {
-  font-weight: 100;
-}
-h1 a {
-  text-decoration: none;
+h1 .name span {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
   color: black;
+  display: block;
+  font-size: 18px;
 }
-h1 a:visited {
-  text-decoration: none;
-  color: #000000;
+h1 .name.ruth span {
+  letter-spacing: 12px;
+  padding-left: 10px;
 }
-h1 a:hover {
-  text-decoration: none;
-  color: #808080;
+h1 .name.josh span {
+  letter-spacing: 3px;
 }
-h2 {
+h1 .amp {
+  font-family: cursive;
+  color: black;
+  font-size: 60px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  margin-right: 5px;
+}
+h2.title {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+h2.title:before {
+  content: ">";
+  margin-right: 5px;
+}
+h3 {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  margin-top: 10px;
+}
+nav {
   text-align: center;
+  text-transform: uppercase;
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  border-bottom: 2px solid #46a8df;
+  width: 100%;
 }
 nav ul {
   list-style-type: none;
+  padding: 0;
+  margin: 5px 0;
 }
 nav ul li {
-  display: inline;
-  margin-right: 5px;
-  text-decoration: none;
+  display: inline-block;
+  margin-right: 8.8%;
 }
-nav ul li :after {
-  content: "|";
-  margin-left: 5px;
+nav ul li a {
   text-decoration: none;
-  color: #000000;
+  color: #191919;
+}
+nav ul li a:visited {
+  color: #191919;
+}
+nav ul li a:hover {
+  color: #46a8df;
+}
+nav ul li.current a {
+  color: #657784;
+}
+nav ul li:last-child {
+  margin-right: 0;
 }
 span.large {
   font-size: 2.5em;
@@ -274,6 +434,305 @@ span.large {
 }
 .hr.dotted {
   border-bottom: 1px dashed black;
+}
+section.content {
+  margin: 20px 0;
+}
+section.content p {
+  padding: 10px 20px;
+}
+section.content a {
+  color: #46a8df;
+}
+section.content h3 {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  color: #657784;
+  font-weight: bold;
+}
+footer {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  text-align: right;
+  color: #898a8a;
+  font-size: 0.75em;
+  padding: 10px 0;
+}
+footer a {
+  text-decoration: none;
+}
+#home .left {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 48.936170072340424%;
+}
+#home .left:first-child,
+#home .left.first {
+  margin-left: 0;
+}
+#home .right {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 48.936170072340424%;
+}
+#home .right:first-child,
+#home .right.first {
+  margin-left: 0;
+}
+#home .text {
+  text-align: center;
+  text-transform: uppercase;
+}
+#home .text h2 {
+  font-family: "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  font-size: 2em;
+  margin-top: 100px;
+}
+#home .text p {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  margin-top: 40px;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+#home .text p.date span {
+  color: #46a8df;
+  font-size: 1.5em;
+}
+#home .text p.location {
+  margin-top: 110px;
+}
+#home .text p.location span {
+  font-size: 0.65em;
+}
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+#home #scene {
+  position: relative;
+  width: 95%;
+  left: 2.5%;
+  padding: 0;
+  display: inline-block;
+}
+#home .background {
+  z-index: 0;
+  border: 1px solid black;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: visible;
+  height: 500px;
+  width: 100%;
+}
+#home .background #sky {
+  height: 300px;
+  z-index: 1;
+}
+#home .background #sky #sun {
+  position: relative;
+  top: 40px;
+  left: 47%;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: yellow;
+  z-index: 1;
+}
+#home .background #sky.dawn {
+  background: #6c7997;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6c7997), color-stop(1, #56425f));
+  background: -ms-linear-gradient(bottom, #6c7997, #56425f);
+  background: -moz-linear-gradient(center bottom, #6c7997 0%, #56425f 100%);
+  background: -o-linear-gradient(#56425f, #6c7997);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56425f', endColorstr='#6c7997', GradientType=0);
+}
+#home .background #sky.dawn #sun {
+  display: none;
+}
+#home .background #sky.sunrise {
+  background: #ffffca;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffffca), color-stop(1, #d3c6cc));
+  background: -ms-linear-gradient(bottom, #ffffca, #d3c6cc);
+  background: -moz-linear-gradient(center bottom, #ffffca 0%, #d3c6cc 100%);
+  background: -o-linear-gradient(#d3c6cc, #ffffca);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3c6cc', endColorstr='#ffffca', GradientType=0);
+}
+#home .background #sky.sunrise #sun {
+  top: 280px;
+  background-color: orange;
+}
+#home .background #sky.sunset {
+  background: #fedd7b;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fedd7b), color-stop(1, #445d7b));
+  background: -ms-linear-gradient(bottom, #fedd7b, #445d7b);
+  background: -moz-linear-gradient(center bottom, #fedd7b 0%, #445d7b 100%);
+  background: -o-linear-gradient(#445d7b, #fedd7b);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#445d7b', endColorstr='#fedd7b', GradientType=0);
+}
+#home .background #sky.sunset #sun {
+  top: 280px;
+  background-color: red;
+}
+#home .background #sky.day {
+  background: #e7fcfc;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e7fcfc), color-stop(1, #bdf3f0));
+  background: -ms-linear-gradient(bottom, #e7fcfc, #bdf3f0);
+  background: -moz-linear-gradient(center bottom, #e7fcfc 0%, #bdf3f0 100%);
+  background: -o-linear-gradient(#bdf3f0, #e7fcfc);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdf3f0', endColorstr='#e7fcfc', GradientType=0);
+}
+#home .background #sky.dusk {
+  background: #6c7997;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6c7997), color-stop(1, #56425f));
+  background: -ms-linear-gradient(bottom, #6c7997, #56425f);
+  background: -moz-linear-gradient(center bottom, #6c7997 0%, #56425f 100%);
+  background: -o-linear-gradient(#56425f, #6c7997);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56425f', endColorstr='#6c7997', GradientType=0);
+}
+#home .background #sky.dusk #sun {
+  display: none;
+}
+#home .background #sky.night {
+  background: #604779;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #604779), color-stop(1, #001649));
+  background: -ms-linear-gradient(bottom, #604779, #001649);
+  background: -moz-linear-gradient(center bottom, #604779 0%, #001649 100%);
+  background: -o-linear-gradient(#001649, #604779);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001649', endColorstr='#604779', GradientType=0);
+}
+#home .background #sky.night #sun {
+  display: none;
+}
+#home .background #sea {
+  height: 200px;
+  background-color: #7cd5df;
+  z-index: 2;
+  position: relative;
+}
+#home .background #sea .boat {
+  position: relative;
+  top: 20px;
+  left: 40px;
+}
+#home .background #grass {
+  height: 200px;
+  width: 100%;
+  background-color: #ABE189;
+  position: relative;
+  overflow: hidden;
+  top: -125px;
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  z-index: 3;
+}
+#home .background #grass div.inside {
+  position: relative;
+  top: 60px;
+  left: 25px;
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  transform: skewY(5deg);
+}
+#home #house {
+  position: absolute;
+  right: -35px;
+  bottom: 0px;
+  z-index: 2;
+}
+#home #house.shade:before {
+  content: url('/images/lyford-house-shade.png');
+  opacity: 0.55;
+  position: absolute;
+  right: 0px;
+  bottom: 9px;
+}
+#home #clock {
+  cursor: pointer;
+  width: 20px;
+  position: absolute;
+  right: -25px;
+  bottom: 0px;
+  z-index: 100;
+}
+#home #clock img {
+  width: 20px;
+}
+#home .dark:after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+#home .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66%;
+  z-index: 10;
+}
+#home .text h2 {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+}
+#home .text.light {
+  color: #DDD;
+  z-index: 11;
+}
+@media all and (max-width: 850px) {
+  #home #scene .text {
+    width: 50%;
+  }
+  #home #scene .text p.date {
+    margin-top: 20px;
+  }
+  #home #scene .text p.location {
+    margin-top: 100px;
+  }
+}
+@media all and (max-width: 700px) {
+  #home #scene .text {
+    width: 100%;
+  }
+  #home #scene .text p.date {
+    margin-top: 20px;
+  }
+  #home #scene .text p.location {
+    margin-top: 120px;
+  }
+  #home #scene #house {
+    display: none;
+  }
+}
+@media all and (max-width: 475px) {
+  #home #scene .text {
+    width: 100%;
+  }
+  #home #scene .text p.date {
+    margin-top: 15px;
+  }
+  #home #scene .text p.location {
+    margin-top: 100px;
+  }
+  #home #scene #house {
+    display: none;
+  }
+}
+.story {
+  padding: 60px 10px;
+  margin-top: -50px;
+  background: white;
 }
 .story .row {
   margin-bottom: 50px;
@@ -339,175 +798,8 @@ span.large {
 .story .row.multi .right.first {
   margin-left: 76.59574447021276%;
 }
-/*---------------------------------------------------
-    LESS Elements 0.9
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-  ---------------------------------------------------*/
-/*.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
-  -moz-column-width: @colwidth;
-  -moz-column-count: @colcount;
-  -moz-column-gap: @colgap;
-  -moz-column-rule-color: @columnRuleColor;
-  -moz-column-rule-style: @columnRuleStyle;
-  -moz-column-rule-width: @columnRuleWidth;
-  -webkit-column-width: @colwidth;
-  -webkit-column-count: @colcount;
-  -webkit-column-gap: @colgap;
-  -webkit-column-rule-color: @columnRuleColor;
-  -webkit-column-rule-style: @columnRuleStyle;
-  -webkit-column-rule-width: @columnRuleWidth;
-  column-width: @colwidth;
-  column-count: @colcount;
-  column-gap: @colgap;
-  column-rule-color: @columnRuleColor;
-  column-rule-style: @columnRuleStyle;
-  column-rule-width: @columnRuleWidth;
-}*/
-/*.waves{
-	background-size:20px 10px;
-	background-color:@waves;
-	background-image:-webkit-radial-gradient(100% 150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-webkit-radial-gradient(0    150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-webkit-radial-gradient(50%  100%,circle,white 10%,@waves 11%,@waves 23%,white 24%,white 30%,@waves 31%,@waves 43%,white 44%,white 50%,@waves 51%,@waves 63%,white 64%,white 71%,transparent 71%,transparent),-webkit-radial-gradient(100% 50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent),-webkit-radial-gradient(0    50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent);
-	background-image:-moz-radial-gradient(100% 150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-moz-radial-gradient(0    150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),-moz-radial-gradient(50%  100%,circle,white 10%,@waves 11%,@waves 23%,white 24%,white 30%,@waves 31%,@waves 43%,white 44%,white 50%,@waves 51%,@waves 63%,white 64%,white 71%,transparent 71%,transparent),-moz-radial-gradient(100% 50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent),-moz-radial-gradient(0    50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent);
-	background-image:radial-gradient(100% 150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),radial-gradient(0    150%,circle,@waves 24%,white 25%,white 28%,@waves 29%,@waves 36%,white 36%,white 40%,transparent 40%,transparent),radial-gradient(50%  100%,circle,white 10%,@waves 11%,@waves 23%,white 24%,white 30%,@waves 31%,@waves 43%,white 44%,white 50%,@waves 51%,@waves 63%,white 64%,white 71%,transparent 71%,transparent),radial-gradient(100% 50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent),radial-gradient(0    50%,circle,white 5%,@waves 6%,@waves 15%,white 16%,white 20%,@waves 21%,@waves 30%,white 31%,white 35%,@waves 36%,@waves 45%,white 46%,white 49%,transparent 50%,transparent);
-	.opacity(0.75);
-}*/
-#home #scene {
-  position: relative;
-  width: 90%;
-  min-width: 400px;
-  padding: 0;
-  display: inline-block;
-}
-#home .background {
-  z-index: -1;
-  border: 1px solid black;
-  position: relative;
-  overflow-y: hidden;
-  overflow-x: visible;
-  height: 500px;
-  width: 100%;
-}
-#home .background #sky {
-  height: 300px;
-  z-index: 2;
-}
-#home .background #sky.dawn {
-  background: #6c7997;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6c7997), color-stop(1, #56425f));
-  background: -ms-linear-gradient(bottom, #6c7997, #56425f);
-  background: -moz-linear-gradient(center bottom, #6c7997 0%, #56425f 100%);
-  background: -o-linear-gradient(#56425f, #6c7997);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56425f', endColorstr='#6c7997', GradientType=0);
-}
-#home .background #sky.sunrise {
-  background: #ffffca;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffffca), color-stop(1, #d3c6cc));
-  background: -ms-linear-gradient(bottom, #ffffca, #d3c6cc);
-  background: -moz-linear-gradient(center bottom, #ffffca 0%, #d3c6cc 100%);
-  background: -o-linear-gradient(#d3c6cc, #ffffca);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3c6cc', endColorstr='#ffffca', GradientType=0);
-}
-#home .background #sky.sunset {
-  background: #fedd7b;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fedd7b), color-stop(1, #445d7b));
-  background: -ms-linear-gradient(bottom, #fedd7b, #445d7b);
-  background: -moz-linear-gradient(center bottom, #fedd7b 0%, #445d7b 100%);
-  background: -o-linear-gradient(#445d7b, #fedd7b);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#445d7b', endColorstr='#fedd7b', GradientType=0);
-}
-#home .background #sky.day {
-  background: #e7fcfc;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e7fcfc), color-stop(1, #bdf3f0));
-  background: -ms-linear-gradient(bottom, #e7fcfc, #bdf3f0);
-  background: -moz-linear-gradient(center bottom, #e7fcfc 0%, #bdf3f0 100%);
-  background: -o-linear-gradient(#bdf3f0, #e7fcfc);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdf3f0', endColorstr='#e7fcfc', GradientType=0);
-}
-#home .background #sky.dusk {
-  background: #6c7997;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6c7997), color-stop(1, #56425f));
-  background: -ms-linear-gradient(bottom, #6c7997, #56425f);
-  background: -moz-linear-gradient(center bottom, #6c7997 0%, #56425f 100%);
-  background: -o-linear-gradient(#56425f, #6c7997);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56425f', endColorstr='#6c7997', GradientType=0);
-}
-#home .background #sky.night {
-  background: #604779;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #604779), color-stop(1, #001649));
-  background: -ms-linear-gradient(bottom, #604779, #001649);
-  background: -moz-linear-gradient(center bottom, #604779 0%, #001649 100%);
-  background: -o-linear-gradient(#001649, #604779);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001649', endColorstr='#604779', GradientType=0);
-}
-#home .background #sky .bird {
-  display: inline-block;
-}
-#home .background #sea {
-  height: 200px;
-  background-color: #7cd5df;
-  z-index: 0;
-}
-#home .background #grass {
-  height: 200px;
-  width: 100%;
-  background-color: #ABE189;
-  position: relative;
-  overflow: hidden;
-  top: -125px;
-  -webkit-transform: skewY(-5deg);
-  -moz-transform: skewY(-5deg);
-  -o-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  transform: skewY(-5deg);
-  z-index: 1;
-}
-#home .background #grass div.text {
-  position: relative;
-  top: 60px;
-  left: 25px;
-  -webkit-transform: skewY(5deg);
-  -moz-transform: skewY(5deg);
-  -o-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  transform: skewY(5deg);
-}
-#home #house {
-  position: absolute;
-  right: -80px;
-  bottom: 0px;
-  z-index: 2;
-}
-#home #house.shade:before {
-  content: url('/images/lyford-house-mask.png');
-  opacity: 0.55;
-  position: absolute;
-  right: 0px;
-  bottom: 9px;
-}
-#home #clock {
-  cursor: pointer;
-  width: 32px;
-  position: absolute;
-  right: -40px;
-  bottom: 0px;
-  z-index: 100;
-}
-#home #clock img {
-  width: 32px;
-}
-#home .dark:after {
-  background: #000;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 10;
+#post_list {
+  padding: 20px;
 }
 #post_list ul {
   list-style-type: none;
@@ -520,10 +812,90 @@ span.large {
 }
 #post_list ul li h3 {
   font-size: 1.2em;
+  margin-bottom: 10px;
 }
 #post_list ul li .content img {
-  width: 100%;
+  max-width: 100%;
 }
 #post_list ul li .meta {
   margin-top: 5px;
+}
+.registry {
+  margin-top: 20px;
+}
+.registry .row {
+  margin-bottom: 50px;
+  width: 100%;
+}
+.registry .row .animal {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 23.40425524893617%;
+  margin-left: 10.638297848936169%;
+}
+.registry .row .animal:first-child,
+.registry .row .animal.first {
+  margin-left: 0;
+}
+.registry .row .animal:first-child,
+.registry .row .animal.first {
+  margin-left: 8.510638274468086%;
+}
+.registry .row .text {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 48.936170072340424%;
+  margin-left: 10.638297848936169%;
+  text-align: center;
+  padding-top: 25px;
+}
+.registry .row .text:first-child,
+.registry .row .text.first {
+  margin-left: 0;
+}
+.registry .row .text:first-child,
+.registry .row .text.first {
+  margin-left: 8.510638274468086%;
+}
+.registry .row .text p {
+  width: 75%;
+  margin: 10px auto;
+}
+.registry .row .text ul {
+  list-style-type: none;
+  padding: 0;
+}
+.registry .row .text ul li {
+  margin-bottom: 5px;
+}
+.registry h3 {
+  text-align: center;
+  font-size: 24px;
+}
+.registry small {
+  font-size: 0.75em;
+}
+#hotels .text {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 57.44680834680851%;
+}
+#hotels .text:first-child,
+#hotels .text.first {
+  margin-left: 0;
+}
+#hotels .map {
+  float: left;
+  margin: 0 0 0 2.127659574468085%;
+  width: 6.3829787%;
+  width: 40.42553179787234%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+#hotels .map:first-child,
+#hotels .map.first {
+  margin-left: 0;
 }

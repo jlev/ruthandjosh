@@ -24,15 +24,16 @@
 
 </head>
 <body>
+	<div class="container">
+	{% include header.html %}
 
+	<section class="content">
+	{% if page.title %}<h2 class="title">{{page.title}}</h2>{%endif%}
+	  {{content}}
+	</section>
 
-{% include header.html %}
-
-<section class="container">
-  {{content}}
-</section>
-
-{% include footer.html %}
+	{% include footer.html %}
+	</div>
 
 </body>
 </html>

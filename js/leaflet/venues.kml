@@ -34,11 +34,11 @@
     </Point>
   </Placemark>
   <Placemark>
-    <name>Best Western Corte Madera</name>
-    <description><![CDATA[56 Madera Boulevard<br>Corte Madera, CA 94925]]></description>
-    <styleUrl>#style3</styleUrl>
+    <name>The Lodge At Tiburon</name>
+    <description><![CDATA[1651 Tiburon Blvd<br>Tiburon, CA]]></description>
+    <styleUrl>#style1</styleUrl>
     <Point>
-      <coordinates>-122.516815,37.930199,0.000000</coordinates>
+      <coordinates>-122.457619,37.874752,0.000000</coordinates>
     </Point>
   </Placemark>
 </Document>

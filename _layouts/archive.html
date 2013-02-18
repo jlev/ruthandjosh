@@ -1,13 +1,17 @@
 ---
 layout: default
+title: Blog
 ---
-
-<h2>{{page.title}}</h2>
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $("post_list img.lazy").lazyload();
+    $("#post_list ul li .content img.lazy").lazyload({ threshold : 200 });
 });
+
+//force a scroll event to kickstart lazy loading
+window.onload = function() {
+    $('img.lazy').first().trigger('scroll');
+}
 </script>
 
 <div id="post_list">

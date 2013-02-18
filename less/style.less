@@ -1,50 +1,110 @@
 /* styles for ruthandjosh.net */
-
+@import "reset";
 @import "smart-grid";
-@import "elements.less";
+@import "elements";
 @import "fonts";
 
-@black: black;
-@red: #e8280e;
-@grey: grey;
+//colors
+@black: #191919;
+@grey: #898A8A;
+@light-blue: #86A0A0;
+@lighter-blue:#F5FAFB;
+@bright-blue:#46A8DF;
+@dark-blue:#657784;
 
-body { font-family: "Century Gothic","Apple Gothic",AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif; }
+body { .serif(); 
+	text-align:center;
+	margin:20px;
+
+	background: -webkit-linear-gradient(-45deg, @grey 25%,
+				    @dark-blue 25%, @dark-blue 50%, 
+				    @grey 50%, @grey 75%, 
+				    @dark-blue 75%);
+	background-size:16px 16px;
+
+}
 :selection {
 	background: #F3F315;
 }
 
-//header
+div.container {
+	background:@lighter-blue;
+	margin:0 auto;
+	border-right:2px white;
+	border-bottom:2px white;
+	text-align:left;
+}
+
+//fancy header
 h1 {
 	text-align:center;
-	span.r { position:relative; top:6px; }
-	span.j { position:relative; top:2px; }
-	span.n { font-weight:100; }
-	a { text-decoration:none; color:black;
-		&:visited { text-decoration:none; color:@black; }
-		&:hover { text-decoration:none; color:@grey; }
+	.serif();
+	text-transform:uppercase;
+	font-weight:normal;
+
+	padding:20px 0;
+	.name {
+		color:@bright-blue;
+		display:inline-block;
+		font-size: 40px;
+		span { .sans();
+			color:black;
+			display:block;
+			font-size:18px;
+		}
+		&.ruth span { letter-spacing:12px; padding-left:10px; }
+		&.josh span { letter-spacing:3px; }
+	}
+	.amp {
+		.script();
+		color:black;
+		font-size:60px;
+		display:inline-block;
+		position:relative;
+		top:-10px;
+		margin-right:5px;
 	}
 }
-h2 { text-align:center; }
+h2.title {
+	.sans();
+	font-size:1.2em;
+	text-transform: uppercase;
+	font-weight:bold;
+	&:before {
+		content:">";
+		margin-right:5px;
+	}
+	margin-bottom:10px;
+}
+
+h3 {
+	.sans();
+	margin-top:10px;
+}
 
 nav {
+	text-align:center;
+	text-transform:uppercase;
+	.sans();
 	ul {
 		list-style-type:none;
+		padding:0;
+		margin:5px 0;
 		li {
-			display:inline;
-			margin-right:5px;
-			text-decoration:none;
-			:after {
-				content:"|";
-				margin-left:5px;
+			display:inline-block;
+			margin-right:8.8%;
+			a {
 				text-decoration:none;
 				color:@black;
+				&:visited { color:@black };
+				&:hover {color:@bright-blue; };
 			}
-
-			a {
-
-			}
+			&.current { a { color:@dark-blue; }}
+			&:last-child { margin-right:0; }
 		}
 	}
+	border-bottom:2px solid @bright-blue;
+	width:100%;
 }
 
 span.large {
@@ -60,7 +120,33 @@ span.large {
 	border-bottom:1px dashed black;
 }
 
+section.content {
+	margin:20px 0;
+
+	p { padding:10px 20px; }
+	a { color:@bright-blue; }
+	h3 { .sans();
+		color:@dark-blue;
+		font-weight:bold;
+	}
+}
+
+footer {
+	.sans();
+	text-align:right;
+	color:@grey;
+	font-size:0.75em;
+	padding:10px 0;
+	a { text-decoration:none;
+
+	}
+
+}
+
 //page specific layouts
-@import "story";
 @import "home";
+@import "lyford-scene";
+@import "story";
 @import "blog";
+@import "registry";
+@import "map";

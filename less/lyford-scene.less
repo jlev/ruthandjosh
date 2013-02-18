@@ -1,0 +1,165 @@
+@import "elements.less";
+
+@waves:#7CD5DF;
+
+#home {
+	#scene {
+		position:relative;
+		width:95%;
+		left:2.5%;
+		padding:0;
+		display:inline-block;
+	}
+	.background {
+		z-index:0;
+		border:1px solid black;
+		position:relative;
+		overflow-y:hidden;
+		overflow-x:visible;
+		height:500px;
+		width:100%;
+		#sky {
+			height:300px;
+			z-index:1;
+
+			#sun {
+				position:relative;
+				top:40px;
+				left: 47%; //should be 50%-30px, but calc doesn't work, so I'm cheating
+				width:60px;
+				height:60px;
+				border-radius:30px;
+				background-color:yellow;
+				z-index:1;
+			}
+
+			&.dawn { .gradient(#6C7997,#6C7997, #56425F);
+				#sun { display:none; }
+			}
+			&.sunrise { .gradient(#FFFFCA, #FFFFCA, #D3C6CC);
+				#sun { top:280px; background-color:orange; }
+			}
+			&.sunset { .gradient(#FEDD7B, #FEDD7B, #445D7B);
+				#sun { top:280px; background-color:red; }
+			}
+			&.day { .gradient(#E7FCFC, #E7FCFC, #BDF3F0); }
+			&.dusk { .gradient(#6C7997,#6C7997, #56425F);
+				#sun { display:none; }
+			}
+			&.night { .gradient(#604779, #604779, #001649);
+				#sun { display:none; }
+			}
+			//stars?
+
+		}
+		#sea {
+			height:200px;
+			background-color:@waves;
+			z-index:2;
+			position:relative;
+			.boat {
+				position:relative;
+				top:20px;
+				left:40px;
+			}
+		}
+		#grass {
+			height:200px;
+			width:100%;
+			background-color:#ABE189;
+			position:relative;
+			overflow:hidden;
+			top:-125px;
+			.transform(skewY(-5deg));
+			div.inside {
+				position:relative;
+				top:60px;
+				left:25px;
+				.transform(skewY(5deg));
+			}
+
+			z-index:3;
+
+		}
+	}
+	#house {
+		position:absolute;
+		right:-35px;
+		bottom:0px;
+		z-index:2;
+		&.shade:before {
+			content:url('/images/lyford-house-shade.png');
+			opacity:0.55;
+			position:absolute;
+			right:0px;
+			bottom:9px;
+		}
+	}
+
+	#clock {
+		cursor:pointer;
+		width:20px;
+		img { width:20px; }
+		position:absolute;
+		right:-25px;
+		bottom:0px;
+		z-index:100;
+	}
+
+	.dark {
+		&:after {
+		    background: #000;
+		    content: "";
+		    display: block;
+		    height: 100%;
+		    left: 0;
+		    opacity: 0.5;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+		    z-index:10;
+		}
+	}
+
+	.text {
+		h2 { .sans(); }
+		position: absolute;
+		top: 0;
+		left: 0;
+		width:66%;
+		z-index: 10;
+		&.light { color:#DDD; z-index:11; }
+	}
+}
+
+@media all and (max-width: 850px) {
+	#home #scene {
+		.text {
+			width:50%;
+			p.date { margin-top:20px; }
+			p.location { margin-top:100px; }
+		}
+	}
+}
+
+@media all and (max-width: 700px) {
+	#home #scene {
+		.text {
+			width:100%;
+			p.date { margin-top:20px; }
+			p.location { margin-top:120px; }
+		}
+		#house { display:none; }
+	}
+}
+
+@media all and (max-width: 475px) {
+	#home #scene {
+		.text {
+			width:100%;
+			p.date { margin-top:15px; }
+			p.location { margin-top:100px; }
+		}
+		#house { display:none; }
+	}
+}

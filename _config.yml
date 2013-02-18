@@ -12,3 +12,19 @@ markdown: maruku
 permalink: pretty
 title:     Ruth and Josh.net
 #url:       http://ruthandjosh.net
+
+navigation:
+- text: Home
+  url: /
+- text: Story
+  url: /story/
+- text: Wedding
+  url: /wedding/
+- text: Hotels
+  url: /hotels/
+- text: RSVP
+  url: /rsvp/
+- text: Registry
+  url: /registry/
+- text: Blog
+  url: /blog/

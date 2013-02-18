@@ -1,4 +1,4 @@
-//functions for home image on ruthandjosh.net
+//functions for lyford scene on ruthandjosh.net
 
 function currentTimeInTz(offset) {
     var d = new Date();
@@ -34,9 +34,11 @@ function setSky(phase) {
 
 		$('#home .background').addClass('dark');
 		$('#home #house').addClass('shade');
+		$('#home .text').addClass('light');
 	} else {
 		$('#home .background').removeClass('dark');
 		$('#home #house').removeClass('shade');
+		$('#home .text').removeClass('light');
 	}
 
 	if (phase === "day") {
