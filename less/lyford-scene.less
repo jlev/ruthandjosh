@@ -150,6 +150,7 @@
 			p.location { margin-top:120px; }
 		}
 		#house { display:none; }
+		#clock { position:static; }
 	}
 }
 
@@ -171,5 +172,14 @@
 			p.location { margin-top:50px; }
 		}
 		#house { display:none; }
+	}
+}
+
+@media all and (max-width: 320px) {
+	home #scene {
+		.text {
+			p.date { margin-top:15px; }
+			p.location { margin-top:-15px; }
+		}
 	}
 }

@@ -720,6 +720,9 @@ footer a {
   #home #scene #house {
     display: none;
   }
+  #home #scene #clock {
+    position: static;
+  }
 }
 @media all and (max-width: 475px) {
   header h1 .amp {
@@ -738,6 +741,14 @@ footer a {
   }
   #home #scene #house {
     display: none;
+  }
+}
+@media all and (max-width: 320px) {
+  home #scene .text p.date {
+    margin-top: 15px;
+  }
+  home #scene .text p.location {
+    margin-top: -15px;
   }
 }
 .story {
