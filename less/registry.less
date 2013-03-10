@@ -7,14 +7,14 @@
 
 		.animal {
 			.column;
-			.columns(3);
+			.columns(4);
 			.offset(1);
 		}
 
 		.text {
 			.column;
 			.columns(6);
-			.offset(1);
+			.offset(0);
 			text-align:center;
 			padding-top:25px;
 			p { width:75%; 
@@ -35,5 +35,21 @@
 
 	small {
 		font-size:0.75em;
+	}
+}
+
+@media all and (max-width: 475px) {
+	.registry {
+		.row {
+			.animal { 
+				.columns(10);
+				.offset(1);
+			}
+			
+			.text {
+				.columns(12);
+				.offset(0);
+			}
+		}
 	}
 }

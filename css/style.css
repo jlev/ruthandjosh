@@ -724,6 +724,7 @@ footer a {
 @media all and (max-width: 475px) {
   #home #scene .text {
     width: 100%;
+    margin-top: -40px;
   }
   #home #scene .text p.date {
     margin-top: 15px;
@@ -837,7 +838,7 @@ footer a {
   float: left;
   margin: 0 0 0 2.127659574468085%;
   width: 6.3829787%;
-  width: 23.40425524893617%;
+  width: 31.914893523404253%;
   margin-left: 10.638297848936169%;
 }
 .registry .row .animal:first-child,
@@ -853,7 +854,7 @@ footer a {
   margin: 0 0 0 2.127659574468085%;
   width: 6.3829787%;
   width: 48.936170072340424%;
-  margin-left: 10.638297848936169%;
+  margin-left: 2.127659574468085%;
   text-align: center;
   padding-top: 25px;
 }
@@ -863,7 +864,7 @@ footer a {
 }
 .registry .row .text:first-child,
 .registry .row .text.first {
-  margin-left: 8.510638274468086%;
+  margin-left: 0%;
 }
 .registry .row .text p {
   width: 75%;
@@ -882,6 +883,24 @@ footer a {
 }
 .registry small {
   font-size: 0.75em;
+}
+@media all and (max-width: 475px) {
+  .registry .row .animal {
+    width: 82.97872317021276%;
+    margin-left: 10.638297848936169%;
+  }
+  .registry .row .animal:first-child,
+  .registry .row .animal.first {
+    margin-left: 8.510638274468086%;
+  }
+  .registry .row .text {
+    width: 99.99999971914895%;
+    margin-left: 2.127659574468085%;
+  }
+  .registry .row .text:first-child,
+  .registry .row .text.first {
+    margin-left: 0%;
+  }
 }
 #hotels .text {
   float: left;
@@ -904,4 +923,33 @@ footer a {
 #hotels .map:first-child,
 #hotels .map.first {
   margin-left: 0;
+}
+@media all and (max-width: 475px) {
+  #hotels .text {
+    float: left;
+    margin: 0 0 0 2.127659574468085%;
+    width: 6.3829787%;
+    width: 99.99999971914895%;
+  }
+  #hotels .text:first-child,
+  #hotels .text.first {
+    margin-left: 0;
+  }
+  #hotels .map {
+    float: left;
+    margin: 0 0 0 2.127659574468085%;
+    width: 6.3829787%;
+    width: 91.48936144468084%;
+    margin-left: 2.127659574468085%;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  #hotels .map:first-child,
+  #hotels .map.first {
+    margin-left: 0;
+  }
+  #hotels .map:first-child,
+  #hotels .map.first {
+    margin-left: 0%;
+  }
 }
