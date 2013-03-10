@@ -150,7 +150,10 @@
 			p.location { margin-top:120px; }
 		}
 		#house { display:none; }
-		#clock { position:static; }
+		#clock {
+			position:static;
+			margin-top:5px;
+		}
 	}
 }
 
@@ -175,11 +178,11 @@
 	}
 }
 
-@media all and (max-width: 320px) {
-	home #scene {
+@media only screen and (max-width : 320px) {
+	#home #scene {
 		.text {
 			p.date { margin-top:15px; }
-			p.location { margin-top:-15px; }
+			p.location { margin-top:12px; }
 		}
 	}
 }

@@ -722,6 +722,7 @@ footer a {
   }
   #home #scene #clock {
     position: static;
+    margin-top: 5px;
   }
 }
 @media all and (max-width: 475px) {
@@ -743,12 +744,12 @@ footer a {
     display: none;
   }
 }
-@media all and (max-width: 320px) {
-  home #scene .text p.date {
+@media only screen and (max-width: 320px) {
+  #home #scene .text p.date {
     margin-top: 15px;
   }
-  home #scene .text p.location {
-    margin-top: -15px;
+  #home #scene .text p.location {
+    margin-top: 12px;
   }
 }
 .story {
