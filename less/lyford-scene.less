@@ -154,12 +154,21 @@
 }
 
 @media all and (max-width: 475px) {
+	header {
+		h1 {
+			.amp { 
+				display:block;
+				top:0px;
+
+			}
+		}
+	}
 	#home #scene {
 		.text {
 			width:100%;
-			margin-top:-40px;
+			margin:-40px 0 0 0;
 			p.date { margin-top:15px; }
-			p.location { margin-top:100px; }
+			p.location { margin-top:50px; }
 		}
 		#house { display:none; }
 	}

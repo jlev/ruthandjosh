@@ -722,15 +722,19 @@ footer a {
   }
 }
 @media all and (max-width: 475px) {
+  header h1 .amp {
+    display: block;
+    top: 0px;
+  }
   #home #scene .text {
     width: 100%;
-    margin-top: -40px;
+    margin: -40px 0 0 0;
   }
   #home #scene .text p.date {
     margin-top: 15px;
   }
   #home #scene .text p.location {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   #home #scene #house {
     display: none;
