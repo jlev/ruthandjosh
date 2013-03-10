@@ -385,6 +385,11 @@ h3 {
   font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
   margin-top: 10px;
 }
+h4 {
+  font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 nav {
   text-align: center;
   text-transform: uppercase;
