@@ -18,12 +18,12 @@ navigation:
   url: /
 - text: Story
   url: /story/
-- text: Wedding
+- text: Ceremony
   url: /wedding/
-- text: Hotels
+- text: Guests
   url: /hotels/
-- text: RSVP
-  url: /rsvp/
+- text: FAQ
+  url: /faq/
 - text: Registry
   url: /registry/
 - text: Blog
