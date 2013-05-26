@@ -21,7 +21,7 @@ navigation:
 - text: Ceremony
   url: /wedding/
 - text: Guests
-  url: /hotels/
+  url: /guests/
 - text: FAQ
   url: /faq/
 - text: Registry
