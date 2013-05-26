@@ -336,6 +336,9 @@ div.container {
   border-bottom: 2px white;
   text-align: left;
 }
+.hidden {
+  color: #f5fafb;
+}
 h1 {
   text-align: center;
   font-family: "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
