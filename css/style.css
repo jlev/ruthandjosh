@@ -829,6 +829,8 @@ footer a {
 }
 #post_list ul li {
   margin: 40px 0px;
+  padding-bottom: 40px;
+  border-bottom: 1px dotted #86a0a0;
 }
 #post_list ul li .date {
   float: right;
