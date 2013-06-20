@@ -39,6 +39,8 @@ div.container {
 	color:@lighter-blue;
 }
 
+em { font-style:italic; }
+
 //fancy header
 h1 {
 	text-align:center;
@@ -141,6 +143,19 @@ section.content {
 		color:@dark-blue;
 		font-weight:bold;
 	}
+}
+
+table {
+	margin:10px 20px; 
+	line-height:20px;
+	border: 1px solid @grey;
+	border-spacing: 10px;
+	th { font-weight: bold;
+		padding-right:10px;
+	}
+	tr:nth-child(odd)		{ background-color:#eee; }
+	tr:nth-child(even)		{ background-color:#fff; }
+	td { padding-right:10px; }
 }
 
 footer {

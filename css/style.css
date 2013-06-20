@@ -339,6 +339,9 @@ div.container {
 .hidden {
   color: #f5fafb;
 }
+em {
+  font-style: italic;
+}
 h1 {
   text-align: center;
   font-family: "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
@@ -457,6 +460,25 @@ section.content h3 {
   font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
   color: #657784;
   font-weight: bold;
+}
+table {
+  margin: 10px 20px;
+  line-height: 20px;
+  border: 1px solid #898a8a;
+  border-spacing: 10px;
+}
+table th {
+  font-weight: bold;
+  padding-right: 10px;
+}
+table tr:nth-child(odd) {
+  background-color: #eee;
+}
+table tr:nth-child(even) {
+  background-color: #fff;
+}
+table td {
+  padding-right: 10px;
 }
 footer {
   font-family: "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", Futura, sans-serif;
