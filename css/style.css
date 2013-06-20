@@ -751,10 +751,15 @@ footer a {
   }
 }
 @media all and (max-width: 475px) {
-  header h1 .amp {
-    display: block;
-    top: 0px;
-  }
+  /*header {
+  		h1 {
+  			.amp { 
+  				display:block;
+  				top:0px;
+  
+  			}
+  		}
+  	}*/
   #home #scene .text {
     width: 100%;
     margin: -40px 0 0 0;
