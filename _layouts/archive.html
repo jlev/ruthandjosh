@@ -16,7 +16,7 @@ window.onload = function() {
 
 <div id="post_list">
 	<ul>
-	{% for post in site.posts %}
+	{% for post in site.posts reversed %}
 		<li>
             <span class="date">{{ post.date | date_to_string }}</span> 
             <h3>{{ post.title }}</h3> 
