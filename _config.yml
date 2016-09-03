@@ -1,13 +1,10 @@
 source:      .
 destination: ./_site
-plugins:     ./_plugins
 
 uto:      false
-server:   false
 lsi:      false
 safe:     false
-pygments: true
-markdown: maruku
+markdown: kramdown
 
 permalink: pretty
 title:     Ruth and Josh.net
